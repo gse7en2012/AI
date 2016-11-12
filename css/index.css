@@ -1,0 +1,196 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    /*vertical-align: baseline;*/
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+    display: block;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+}
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+img{
+    border:none;
+}
+
+
+/*my style*/
+
+.gray{
+    position: fixed;
+    background:#b5b6b6;
+    height: 60px;
+    width: 100%;
+    bottom:0;
+    z-index: 999;
+}
+.car{
+    position: fixed;
+    bottom: 78px;
+    width: 320px;
+    z-index: 99;
+    left: 400px;
+}
+.car-active{
+    -webkit-animation:carMove 0.1s linear 0s infinite alternate;
+    animation:carMove 0.1s linear 0s infinite alternate;
+}
+@-webkit-keyframes carMove {
+    from {
+        -webkit-transform: translate3d(0px,-2px,0px);
+        transform: translate3d(0px,-2px,0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(0px,2px,0px);
+        transform: translate3d(0px,2px,0px);
+    }
+}
+
+@keyframes carMove{
+    from {
+        -webkit-transform: translate3d(0px,-2px,0px);
+        transform: translate3d(0px,-2px,0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(0px,2px,0px);
+        transform: translate3d(0px,2px,0px);
+    }
+}
+
+
+
+
+.page{
+    width: 1440px;
+    min-height: 750px;
+}
+.page img{
+    position: absolute;
+}
+
+.page1{
+    width: 1440px;z-index: 10;
+}
+.page1 .start{ bottom:131px; left: 0; width: 1100px; }
+.page1 .road{bottom:60px; }
+.page1 .pai{width: 160px; bottom: 433px; left: 462px; }
+.page1 .title{ width: 650px; left: 200px; bottom: 650px; }
+.page1 .ctrl{ width: 400px; left: 340px; bottom:570px; }
+.page1 .logo{ width: 90px; left: 40px; top: 40px; }
+.page1 .sun{ width: 120px; right: 420px; top: 50px; }
+.page1 .bottle{width: 55px; bottom: 140px; left: 155px; }
+.page1 .cloud{width: 300px; right: 300px; top: 100px; z-index: 1;}
+.page1 .mountain{width: 300px; right: 80px; bottom: 143px;}
+
+.page2{z-index: 2;}
+.page2 .tian{width: 900px; bottom: 145px; left: -112px;}

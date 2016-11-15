@@ -224,11 +224,46 @@ img{
 
 .pc3 .road-long3{background:#b5b6b6 url(../images/page3/road333.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 100%; left: 0; bottom: 60px;}
 .page3{}
-.page3 .door{width: 1250px; bottom: 71px; left: 50%; margin-left: -616px;}
+.page3 .door{width: 1060px;
+    bottom: 136px;
+    left: 145px;}
 
-.page3 .wall-left{    width: 116px; left: 50px; bottom: 145px;}
-.page3 .wall-right{width: 120px; right: 41px; bottom: 145px;}
-.page3 .door2{width: 1250px;}
+.page3 .wall-left{width: 101px;
+    left: 45px;
+    bottom: 145px;}
+.page3 .wall-right{width: 101px;
+    right: 45px;
+    bottom: 145px;}
+.page3 .door2{width: 1060px;
+    left: 145px;
+    bottom: 144px;
+    height: 630px;opacity: .7}
+.page3 .machine{  width: 380px;
+    left: 595px;
+    bottom: 242px;
+    z-index: 199;}
+.page3 .machine2{width: 430px;
+    bottom: 143px;
+    left: 200px;
+    z-index: 200;}
+.page3 .machine3{width: 400px;
+    left: 576px;
+    bottom: 230px;
+    z-index: 199;}
+.page3 .busstop{width: 100px;
+    bottom: 120px;
+    z-index: 300;
+    left: 160px;}
+.page3 .word{width: 785px;
+    left: 345px;
+    bottom: 220px;z-index: 200;}
+.page3 .desc{
+    width: 140px;
+    left: 439px;
+    bottom: 510px;
+    z-index: 198;
+}
+
 
 .pc4 .road-long4{background:#b5b6b6 url(../images/page3/road333.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 100%; left: 0; bottom: 60px;}
 

@@ -137,7 +137,8 @@ img{
     bottom: 78px;
     width: 320px;
     z-index: 99;
-    left: 400px;
+    left: 50%;
+    margin-left: -160px;
 }
 .car-active{
     -webkit-animation:carMove 0.1s linear 0s infinite alternate;
@@ -145,8 +146,8 @@ img{
 }
 @-webkit-keyframes carMove {
     from {
-        -webkit-transform: translate3d(0px,-2px,0px);
-        transform: translate3d(0px,-2px,0px);
+        -webkit-transform: translate3d(0px,-1px,0px);
+        transform: translate3d(0px,-1px,0px);
     }
 
     to {
@@ -157,8 +158,8 @@ img{
 
 @keyframes carMove{
     from {
-        -webkit-transform: translate3d(0px,-2px,0px);
-        transform: translate3d(0px,-2px,0px);
+        -webkit-transform: translate3d(0px,-1px,0px);
+        transform: translate3d(0px,-1px,0px);
     }
 
     to {
@@ -171,26 +172,98 @@ img{
 
 
 .page{
-    width: 1440px;
+    width: 1350px;
     min-height: 750px;
+    margin: 0 auto;
+    position: relative;
 }
-.page img{
+.swiper-slide{
+    transform-origin: bottom;
+}
+.swiper-slide img,.page img{
     position: absolute;
 }
 
-.page1{
-    width: 1440px;z-index: 10;
-}
-.page1 .start{ bottom:131px; left: 0; width: 1100px; }
-.page1 .road{bottom:60px; }
-.page1 .pai{width: 160px; bottom: 433px; left: 462px; }
-.page1 .title{ width: 650px; left: 200px; bottom: 650px; }
-.page1 .ctrl{ width: 400px; left: 340px; bottom:570px; }
+.logo{ width: 90px; left: 40px; top: 40px;z-index: 99; }
+
+.pc1{z-index: 10;}
+.pc1 .road{bottom:60px;z-index: 101; }
+.pc1 .road-long{background: url(../images/page1/road.png) repeat-x -7px 0;position: absolute;height: 85px;width: 500px;right:0;bottom:60px;z-index: 102 }
+
+.page1{}
+.page1 .start{ bottom:131px; left: 0; width: 1000px; }
+.page1 .pai{width: 140px; bottom: 405px; left: 432px; }
+.page1 .title{ width: 600px; left: 200px; bottom: 600px; }
+.page1 .ctrl{ width: 370px; left: 340px; bottom: 500px; }
 .page1 .logo{ width: 90px; left: 40px; top: 40px; }
-.page1 .sun{ width: 120px; right: 420px; top: 50px; }
-.page1 .bottle{width: 55px; bottom: 140px; left: 155px; }
-.page1 .cloud{width: 300px; right: 300px; top: 100px; z-index: 1;}
-.page1 .mountain{width: 300px; right: 80px; bottom: 143px;}
+.page1 .sun{     width: 110px; right: 370px; bottom: 600px; }
+.page1 .bottle{width: 50px; bottom: 140px; left: 155px; }
+.page1 .cloud{width: 250px; right: 300px; bottom: 600px; z-index: 1;}
+.page1 .mountain{width: 270px; right: 110px; bottom: 143px;}
+
+
+.pc2{z-index: 9;}
+.pc2 .road-long{background: url(../images/page1/road.png) repeat-x -12px 0;position: absolute;height: 85px;width: 100%;left:0;bottom:60px;z-index: 2;}
+.pc2 .road-long2{background:#b5b6b6 url(../images/page2/road2.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 364px; right: 0; bottom: 60px;z-index: 102;}
 
 .page2{z-index: 2;}
-.page2 .tian{width: 900px; bottom: 145px; left: -112px;}
+.page2 .tian{width: 860px; bottom: 90px; left: -100px;}
+.page2 .m{width: 450px; bottom: 118px; left: 875px; z-index: 99;}
+.page2 .mogu1{width: 260px; bottom: 61px; z-index: 100; left: 350px;}
+.page2 .mogu2{width: 120px; bottom: 61px; z-index: 99; left: 130px;}
+.page2 .branch{width: 380px;left: 646px; bottom: 120px;}
+.page2 .gouqi{width: 150px; left: 750px; bottom: 595px;}
+.page2 .juemingzi{width: 100px;  bottom: 330px;  left: 624px;}
+.page2 .juhua{    width: 100px; left: 974px; bottom: 450px;}
+.page2 .fuling{width: 100px; left: 605px; bottom: 535px;}
+.page2 .jinzhengu{width: 100px; left: 908px; bottom: 566px;}
+.page2 .xianggu{width: 120px; left: 682px; bottom: 460px;}
+.page2 .sangshen{width: 80px; bottom: 340px; left: 930px;}
+.page2 .yiner{width: 80px; left: 873px; bottom: 410px;}
+
+
+.pc3 .road-long3{background:#b5b6b6 url(../images/page3/road333.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 100%; left: 0; bottom: 60px;}
+.page3{}
+.page3 .door{width: 1250px; bottom: 71px; left: 50%; margin-left: -616px;}
+
+.page3 .wall-left{    width: 116px; left: 50px; bottom: 145px;}
+.page3 .wall-right{width: 120px; right: 41px; bottom: 145px;}
+.page3 .door2{width: 1250px;}
+
+.pc4 .road-long4{background:#b5b6b6 url(../images/page3/road333.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 100%; left: 0; bottom: 60px;}
+
+
+.pc5{}
+.pc5 .road-long5{background: #898989 url(../images/page3/road333.png) repeat-x 0 78px;
+    position: absolute;
+    height: 164px;
+    width: 100%;
+    left: 0;
+    bottom: 60px;}
+.page5 .road5{width: 100%;bottom:61px;z-index: 200;}
+.page5 .tree{z-index: 203;
+    width: 330px;
+    bottom: 212px;
+    left: 140px;}
+.page5 .grass{width: 250px; z-index: 201; bottom: 123px; left: -55px;}
+.page5 .grass2{width: 300px;
+    left: 1000px;
+    bottom: 300px;}
+.page5 .busstop{ z-index: 212; width: 110px; bottom: 125px; left: 170px;}
+.page5 .plane{width: 100px;
+    left: 1000px;
+    bottom: 640px;}
+.page5 .home{    width: 540px;
+    bottom: 306px;
+    left: 420px;z-index: 205;}
+.page5 .house{width: 200px;
+    bottom: 302px;
+    left: 250px;z-index: 199}
+.page5 .man1{width: 120px;
+    bottom: 200px;
+    left: 400px;
+    z-index: 300;}
+.page5 .man2{    width: 100px;
+    left: 1000px;
+    bottom: 174px;
+    z-index: 300;}

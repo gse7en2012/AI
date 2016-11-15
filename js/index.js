@@ -16,7 +16,7 @@
         },
         setSwiper: function () {
             var winSize=this.getWinSize();
-            var swiperWidth = winSize.w < 1440 ? 1440 : winSize.w;
+            var swiperWidth = winSize.w < 1350 ? 1350 : winSize.w;
             $('.page').height(winSize.h);
             var mySwiper    = new Swiper('.swiper-container', {
                 // Optional parameters
@@ -30,6 +30,12 @@
                 keyboardControl: true,
                 mousewheelControl: true,
             });
+
+            //if(winSize.w>=1680){
+            //    $('.swiper-slide').css({
+            //        'transform':'scale(1.2)'
+            //    });
+            //}
             return mySwiper;
         },
     };

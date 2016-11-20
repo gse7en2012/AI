@@ -183,12 +183,36 @@ img{
 .swiper-slide img,.page img{
     position: absolute;
 }
+.wxj-pagination{
+    position: fixed;
+    bottom:12px;
+    z-index: 1000;
+    left: 50%;
+    color: #fff;
+    transform: translateX(-50%);
+    font-size: 24px;
+}
+.wxj-pagination > .swiper-pagination-bullet {
+    margin: 0 6px;
+    width: 90px;
+    background: transparent;
+    height: 30px;
+    text-align: center;
+    border-radius: 0;
+}
+.swiper-pagination-bullet{
+    opacity: .5;
+}
+.swiper-pagination-bullet-active{
+    opacity: 1;
+}
 
 .logo{ width: 90px; left: 5%; top:8%;z-index: 99; }
 
 .pc1{z-index: 10;}
 .pc1 .road{bottom:60px;z-index: 101; }
 .pc1 .road-long{background: url(../images/page1/road.png) repeat-x -7px 0;position: absolute;height: 85px;width: 100%;right:-2px;bottom:60px;z-index: 102 }
+.pc1 .pc1-edge{z-index: -1; right: 100px; bottom: 126px; width: 400px;}
 
 .page1{}
 .page1 .start{ bottom:131px; left: 0; width: 1000px; }
@@ -316,6 +340,7 @@ img{
 .pc2{z-index: 9;}
 .pc2 .road-long{background: url(../images/page1/road.png) repeat-x -12px 0;position: absolute;height: 85px;width: 100%;left:0;bottom:60px;z-index: 201;}
 .pc2 .road-long2{background:#b5b6b6 url(../images/page2/road2.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 100%; right: 0; bottom: 60px;z-index: 102;}
+.pc2 .pc2-edge{z-index: -1; right: 0; bottom: 138px; width: 400px;}
 
 .page2{z-index: 2;}
 .page2 .tian{width: 860px; bottom: 90px; left: -100px;}
@@ -335,6 +360,13 @@ img{
 .page2 .yiner{width: 80px; left: 873px; bottom: 410px;opacity: 0;}
 .page2 .farmer{width: 200px; bottom: 330px; left: 370px;}
 .page2 .bird{width: 50px;animation:birdFly 2s linear infinite,birdMove 10s ease-in infinite;left: 400px;top:100px;z-index: 44;}
+.page2 .notice{width: 100px;
+    left: 300px;
+    bottom: 600px;}
+.page2 .c22{width: 100px;bottom: 550px;left: 300px;
+-webkit-animation:cloudMove2 linear 15s infinite;z-index: 100; animation:cloudMove2 linear 15s infinite;}
+.page2 .c222{width: 120px;bottom: 630px; left:600px;-webkit-animation:cloudMove linear 20s infinite;
+    animation:cloudMove linear 20s infinite;z-index: 101;}
 
 .active .branch.animated{opacity:1;-webkit-animation:growup 1.5s linear both 1s;animation:growup 1.5s linear both 1s;}
 .active .gouqi{animation:bounceIn .5s linear 2.9s forwards,page2Rotate 5s linear infinite;; }
@@ -438,10 +470,10 @@ img{
 }
 @keyframes birdMove {
     0%{
-       left:-20%
+       left:-10%
     }
     100%{
-       left:120%;
+       left:105%;
     }
 }
 
@@ -487,7 +519,124 @@ img{
     bottom: 510px;
     z-index: 198;
 }
+.page3 .flog1{
+    bottom: 480px;
+    left: 380px;
+    z-index: 300;
+    width: 80px;
+    opacity: 1;
+    transform-origin: 0 100%;
+    animation:flog1Up 3.2s linear infinite;
+}
+.page3 .flog2 {
+    bottom: 375px;
+    left: 1040px;
+    z-index: 300;
+    width: 80px;
+    opacity: 1;
+    transform-origin: 0 100%;
+    animation: flog2Up 4s linear infinite;
+}
+.page3 .water-box{
+    position: absolute;
+    overflow: hidden;
+    left: 633px;
+    bottom: 384px;
+    height: 50px;
+    width: 200px;
+}
+.page3 .water1{
+    left: 0;
+    width: 60px;
+    animation: waterDrop 2.4s linear infinite;
+}
+.page3 .water2{
+    left: 70px;
+    width: 60px;
+    animation: waterDrop 2.4s linear .5s infinite;
+}
+.page3 .water3{
+    left: 140px;
+    width: 60px;
+    animation: waterDrop 2.4s linear 1s infinite;
+}
+@keyframes waterDrop {
+    0%{
+        top:-20px;
+    }
+    75%{
+        top:0px;
+    }
+    85%{
+        top:50px;
+    }
+    100%{
+        top:50px;
+    }
+}
+@keyframes flog1Up {
+    0%{
+        left:365px;
+        bottom: 465px;
+        opacity: 1;
+        transform: scale(0.1);
+    }
+    90%{
+        left:400px;
+        bottom: 520px;
+        transform: scale(1);
+        opacity: 0;
+    }
+    100%{
+        left:400px;
+        bottom: 520px;
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+@keyframes flog2Up {
+    0%{
+        left: 1040px;
+        bottom: 375px;
+        opacity: 1;
+        transform: scale(0.3);
+    }
+    90%{
+        left:1070px;
+        bottom: 420px;
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100%{
+        left:1070px;
+        bottom: 420px;
+        transform: scale(1.1);
+        opacity: 0;
+    }
+}
 
+
+.page3 .tips1{ left: 280px; bottom: 450px;}
+.page3 .tips2{left: 412px; bottom: 433px;}
+.page3 .tips3{left: 310px; bottom: 580px;}
+.page3 .tips4{left: 400px; bottom: 644px;}
+.page3 .tips5{left: 530px; bottom: 660px;}
+.page3 .tips6{left: 670px; bottom: 640px;}
+.page3 .tips7{left: 860px; bottom: 662px;}
+.page3 .tips8{left: 936px; bottom: 600px;}
+.page3 .pulse-delay{
+    animation-delay: .5s;
+}
+.page3 .tips{
+    position: absolute;
+    width: 80px;
+    height: 90px;
+    background: url(../images/page3/button.png) no-repeat 0 0;
+    background-size: 100%;
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    line-height: 45px;z-index: 300; }
 
 .pc4 .road-long4{background:#b5b6b6 url(../images/page3/road333.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 100%; left: 0; bottom: 60px;}
 
@@ -520,6 +669,19 @@ img{
     width: 100%;
     left: 0;
     bottom: 60px;}
+.pc5 .pc5-edge{
+    left: -20px;
+    bottom: 143px;
+    width: 410px;
+}
+.pc5 .pc5-edge2{
+    right: 0;
+    bottom: 207px;
+    width: 410px;
+    z-index: 300;
+}
+
+
 .page5 .road5{width: 100%;bottom:61px;z-index: 200;}
 .page5 .tree{z-index: 203;
     width: 330px;
@@ -528,11 +690,11 @@ img{
 .page5 .grass{width: 250px; z-index: 201; bottom: 123px; left: -55px;}
 .page5 .grass2{width: 300px;
     left: 1000px;
-    bottom: 300px;}
+    bottom: 300px;z-index: 299;}
 .page5 .busstop{ z-index: 212; width: 110px; bottom: 125px; left: 170px;}
 .page5 .plane{width: 100px;
     left: 1000px;
-    bottom: 640px;}
+    bottom: 640px;animation:planeMove 22s linear infinite;}
 .page5 .home{    width: 540px;
     bottom: 306px;
     left: 420px;z-index: 205;}
@@ -542,16 +704,78 @@ img{
 .page5 .man1{width: 120px;
     bottom: 200px;
     left: 400px;
-    z-index: 300;}
-.page5 .man2{    width: 100px;
+    z-index: 300;animation:man1Move 8s linear infinite; }
+.page5 .man2{    width: 140px;
     left: 1000px;
     bottom: 174px;
     z-index: 300;}
+.page5 .cloud2{right: 400px; bottom:600px;-webkit-animation:cloudMove2 linear 16s infinite;
+    animation:cloudMove2 linear 16s infinite;}
+.page5 .c22{width: 100px;bottom: 650px;left: 200px;
+    -webkit-animation:cloudMove2 linear 22s infinite;z-index: 100; animation:cloudMove2 linear 22s infinite;}
+.page5 .c5{bottom: 730px;left: 480px;
+    -webkit-animation:cloudMove linear 17s infinite;z-index: 100; animation:cloudMove linear 17s infinite;}
 
+@-webkit-keyframes planeMove {
+    0%{
+        -webkit-transform: translateX(-1220%);
+        transform: translateX(-1220%);
+    }
+    100%{
+        -webkit-transform:translateX(420%);
+        transform: translateX(420%);
+    }
+}
+@keyframes planeMove {
+    0%{
+        -webkit-transform: translateX(-1220%);
+        transform: translateX(-1220%);
+    }
+    100%{
+        -webkit-transform:translateX(420%);
+        transform: translateX(420%);
+    }
+}
+@keyframes man1Move {
+    0%{
+        left: 410px;
+        bottom: 200px;
+        opacity: 1;
+    }
+    20%{
+        left: 447px;
+        bottom: 200px;
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+        bottom: 280px;
+        left: 620px;
+    }
+    100%{
+        opacity: 0;
+        bottom: 280px;
+        left: 620px;
+    }
+}
+
+
+@media (max-width: 1680px) {
+    .pc5-edge2{
+        display: none;
+    }
+}
 
 @media (min-width: 1680px) {
     .logo{
         top:20%;
         left:12%;
+    }
+    .wxj-pagination{
+        font-size: 30px;bottom:10px;
+    }
+    .wxj-pagination > .swiper-pagination-bullet{
+        margin: 0 10px;
+        height: 40px;
     }
 }

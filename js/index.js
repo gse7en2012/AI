@@ -11,6 +11,7 @@
                 h: $(window).height()
             }
         },
+        pageName:['开始','种植站','生产站','包装站','商店'],
         init: function () {
             this.setSwiper();
         },
@@ -24,9 +25,14 @@
                 //loop: true,
                 speed: 2000,
                 width: swiperWidth,
-                freeMode: true,
+                freeMode: false,
                 freeModeMomentum: false,
                 freeModeMomentumBounceRatio: 5,
+                pagination : '.wxj-pagination',
+                paginationClickable :true,
+                paginationBulletRender: function (index, className) {
+                    return '<span class="' + className + '"><span>' + Gseven.pageName[index] + '</span></span>';
+                },
                 keyboardControl: true,
                 mousewheelControl: true,
                 slideActiveClass: 'active',
@@ -41,12 +47,18 @@
 
             if(winSize.w>=1680){
                 $('.swiper-slide,.gray').css({
+                    'transform':'scale(1.1)',
+                    'transformOrigin':'bottom'
+                });
+            }
+            if(winSize.w>=1920){
+                $('.swiper-slide,.gray').css({
                     'transform':'scale(1.2)',
                     'transformOrigin':'bottom'
                 });
             }
             return mySwiper;
-        },
+        }
     };
     Gseven.init();
 

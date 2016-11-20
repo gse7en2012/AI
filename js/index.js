@@ -42,6 +42,13 @@
                     //setTimeout(function(){
                     //    $('.replay-animate').addClass('animated').removeClass('replay-animate')
                     //},500)
+                },
+                onTransitionEnd:function(sw){
+                   if(sw.activeIndex==4){
+                       $('.pc5-tip').addClass('active');
+                   }else{
+                       $('.pc5-tip').removeClass('active');
+                   }
                 }
             });
 

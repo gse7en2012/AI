@@ -168,8 +168,106 @@ img{
     }
 }
 
+/* intro modal*/
+.intro-modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 100%;
+    z-index: 99999;
+    background-color: rgba(0,0,0,0.8);
+    overflow: auto;
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(10px) saturate(180%);
+}
+.intro-block:after{
+    clear: both;
+}
+.intro-block{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.intro-body{
+    text-indent: 2em;
+    color: white;
+    font-weight: 100;
+    padding: 42px;
+    text-align: left;
+}
+.intro-logo{
+    width: 100%;
+    margin-top: 130px;
+    text-align: center;
+}
+.close{
+    right: -315px;
+    display: none;
+}
+.open{
+    display: block;
+}
+.close-btn{
+    background: url(../images/close.svg) no-repeat;
+    width: 36px;height: 36px;
+   position: absolute;
+    right: 0;
+    margin: 28px;
+    cursor: pointer;
+}
+.open-intro{
+    cursor: pointer;
+}
+.single-page{
+    background-size: 100%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.intro-main{
+    text-align: left;
+    padding: 15px;
+}
+.intro-main .name{
+    font-size: 20px;
+    text-align: center;
+    margin: 10px auto;
+    color:#f2dd2a;
+}
+.intro-main .title,.intro-main .age{
+    font-size: 16px;
+    text-align: center;
+    margin: 10px auto;
+    color:#f2dd2a;
+}
+.intro-main .avatar{
+    display: block;
+    width: 300px;
+    margin: 10px auto;
+}
+.intro-main .content{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #eee;
+    padding: 10px;
+}
+.intro-main .word{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    line-height: 1.5;
+    margin: 10px;
+    padding: 10px 0;
+}
 
 
+/*page start*/
 
 .page{
     width: 1350px;
@@ -209,6 +307,28 @@ img{
 
 .logo{ width: 90px; left: 5%; top:8%;z-index: 99; }
 
+.guide{
+    position: absolute;
+    color: #f6ab00;
+    z-index: 999;
+    font-size: 18px;
+}
+.guide img{
+    width: 30px;
+    display: block;
+    margin: 8px auto;
+    position: static!important;
+    animation:upDown 1s linear infinite
+}
+@keyframes upDown {
+    0%{
+        transform:translateY(-10%)
+    }
+    100%{
+        transform:translateY(10%)
+    }
+}
+
 .pc1{z-index: 10;}
 .pc1 .road{bottom:60px;z-index: 101; }
 .pc1 .road-long{background: url(../images/page1/road.png) repeat-x -7px 0;position: absolute;height: 85px;width: 100%;right:-2px;bottom:60px;z-index: 102 }
@@ -219,6 +339,8 @@ img{
     width: 300px;}
 
 .page1{}
+.page1 .guide{left: 240px;
+    bottom: 310px;}
 .page1 .start{ bottom:131px; left: 160px; width: 1000px; }
 .page1 .pai{width: 140px; bottom: 405px; left: 590px; }
 .page1 .title{ width: 600px; left: 280px; bottom: 600px; }
@@ -347,6 +469,10 @@ img{
 .pc2 .pc2-edge{z-index: -1; right: 0; bottom: 138px; width: 400px;}
 
 .page2{z-index: 2;}
+.page2 .guide{
+    left: 300px;
+    bottom:700px;
+}
 .page2 .tian{width: 860px; bottom: 90px; left: -100px;}
 .page2 .m{width: 450px; bottom: 118px; left: 875px; z-index: 99;}
 .page2 .mogu1{width: 260px; bottom: 61px; z-index: 100; left: 350px;}
@@ -365,8 +491,8 @@ img{
 .page2 .farmer{width: 200px; bottom: 330px; left: 370px;}
 .page2 .bird{width: 50px;animation:birdFly 2s linear infinite,birdMove 10s ease-in infinite;left: 400px;top:100px;z-index: 44;}
 .page2 .notice{width: 100px;
-    left: 300px;
-    bottom: 600px;}
+    left: 320px;
+    bottom: 570px;}
 .page2 .c22{width: 100px;bottom: 550px;left: 300px;
 -webkit-animation:cloudMove2 linear 15s infinite;z-index: 100; animation:cloudMove2 linear 15s infinite;}
 .page2 .c222{width: 120px;bottom: 630px; left:600px;-webkit-animation:cloudMove linear 20s infinite;
@@ -490,6 +616,22 @@ img{
     width: 340px;}
 
 .page3{z-index: 100;}
+.page3 .guide,.page4 .guide{
+    left: 1070px;
+    bottom: 600px;
+}
+.page3 .guide img,.page4 .guide img{
+    transform: rotate(180deg);
+    animation-name: upDownRotate;
+}
+@keyframes upDownRotate {
+    0%{
+        transform:translateY(10%) rotate(180deg)
+    }
+    100%{
+        transform:translateY(-10%) rotate(180deg)
+    }
+}
 .page3 .door,.page4 .door{width: 1060px;
     bottom: 136px;
     left: 145px;}
@@ -641,8 +783,9 @@ img{
 .page3 .pulse-delay{
     animation-delay: .5s;
 }
-.page3 .tips,.page4 .tips{
+.page2 .tips,.page3 .tips,.page4 .tips{
     position: absolute;
+    cursor: pointer;
     width: 70px;
     height: 80px;
     background: url(../images/page3/button.png) no-repeat 0 0;
@@ -652,6 +795,15 @@ img{
     text-align: center;
     line-height: 38px;
     z-index: 300; }
+.page2 .tips{
+    right: 20px;
+    bottom: 650px;
+    width: 80px;
+    font-size: 18px;
+    line-height: 45px;
+    text-decoration: none;
+}
+
 
 .pc4 .road-long4{background:#b5b6b6 url(../images/page3/road333.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 100%; left: 0; bottom: 60px;z-index: 100;}
 .pc4-edge{left: 0;
@@ -816,6 +968,11 @@ img{
 }
 
 .page5{z-index: 98;}
+.page5 .guide{
+    left: 380px;
+    bottom: 630px;
+}
+
 .page5 .road5{width: 100%;bottom:61px;z-index: 200;}
 .page5 .tree{z-index: 203;
     width: 330px;
@@ -859,10 +1016,16 @@ img{
     left: 50%;
     margin-left: -120px;
 }
-.pc5-tip.active{
+.pc5-tip.active,.pc5-guide.active{
     display: block;
 }
-
+.pc5-guide{
+    display: none;
+    position: fixed;
+    bottom: 230px;
+    left: 50%;
+    margin-left: -72px;
+}
 
 @-webkit-keyframes planeMove {
     0%{

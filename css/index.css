@@ -288,7 +288,8 @@ img{
     left: 50%;
     color: #fff;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 20px;
+    font-family: "SimHei";
 }
 .wxj-pagination > .swiper-pagination-bullet {
     margin: 0 6px;
@@ -467,11 +468,20 @@ img{
 .pc2 .road-long{background: url(../images/page1/road.png) repeat-x -12px 0;position: absolute;height: 85px;width: 100%;left:0;bottom:60px;z-index: 201;}
 .pc2 .road-long2{background:#b5b6b6 url(../images/page2/road2.png) repeat-x 4px -1px; position: absolute; height: 85px; width: 100%; right: 0; bottom: 60px;z-index: 102;}
 .pc2 .pc2-edge{z-index: -1; right: 0; bottom: 138px; width: 400px;}
-
+.pc2 .page2 .syzl{
+    right: 8%;
+}
 .page2{z-index: 2;}
 .page2 .guide{
     left: 300px;
-    bottom:700px;
+    bottom:690px;
+    transform-origin: bottom;
+    transform: scale(.8);
+}
+.page2 .guide2{
+    right: 8%;
+    bottom: 600px;
+    left: auto;
 }
 .page2 .tian{width: 860px; bottom: 90px; left: -100px;}
 .page2 .m{width: 450px; bottom: 118px; left: 875px; z-index: 99;}
@@ -620,7 +630,7 @@ img{
     left: 1070px;
     bottom: 600px;
 }
-.page3 .guide img,.page4 .guide img{
+.page2 .guide2 img,.page3 .guide img,.page4 .guide img,.page5 .guide-t img{
     transform: rotate(180deg);
     animation-name: upDownRotate;
 }
@@ -688,7 +698,7 @@ img{
     transform-origin: 0 100%;
     animation: flog2Up 4s linear infinite;
 }
-.page3 .story,.page4 .story{right: 13%;
+.page2 .syzl,.page3 .story,.page4 .story,.page5 .story{right: 13%;
     bottom: 660px;
     z-index: 50;
     width: 100px;}
@@ -786,14 +796,14 @@ img{
 .page2 .tips,.page3 .tips,.page4 .tips{
     position: absolute;
     cursor: pointer;
-    width: 70px;
-    height: 80px;
+    width: 60px;
+    height: 70px;
     background: url(../images/page3/button.png) no-repeat 0 0;
     background-size: 100%;
     color: #fff;
-    font-size: 24px;
+    font-size: 18px;
     text-align: center;
-    line-height: 38px;
+    line-height: 34px;
     z-index: 300; }
 .page2 .tips{
     right: 20px;
@@ -932,21 +942,23 @@ img{
 
 
 .page4 .tips{
-    width: 110px;
-    height:120px;
-    font-size: 20px;
-    line-height: 60px;
+    width: 80px;
+    height: 90px;
+    font-size: 16px;
+    line-height: 46px;
 }
 .page4 .tips1{left: 240px; bottom: 290px;}
 .page4 .tips2{left: 400px; bottom: 380px;}
-.page4 .tips3{left: 590px;
-    bottom: 380px;
-    font-size: 24px;
-    width: 90px;
-    height: 100px;
-    line-height: 50px;}
+.page4 .tips3{left: 610px;
+    bottom: 365px;
+    font-size: 18px;
+    width: 60px;
+    height: 70px;
+    line-height: 35px;}
 .page4 .tips4{left: 1070px;
-    bottom: 370px;}
+    bottom: 370px;
+    width: 90px;
+    height: 100px;font-size: 15px;}
 
 .pc5{}
 .pc5 .road-long5{background: #898989 url(../images/page3/road333.png) repeat-x 0 78px;
@@ -972,7 +984,10 @@ img{
     left: 380px;
     bottom: 630px;
 }
-
+.page5 .guide-t{
+    bottom: 600px;
+    left: 1070px;
+}
 .page5 .road5{width: 100%;bottom:61px;z-index: 200;}
 .page5 .tree{z-index: 203;
     width: 330px;
@@ -992,11 +1007,11 @@ img{
 .page5 .house{width: 200px;
     bottom: 302px;
     left: 250px;z-index: 199}
-.page5 .man1{width: 140px;
+.page5 .man1{width: 90px;
     bottom: 200px;
     left: 400px;
     z-index: 300;animation:man1Move 7s linear infinite; }
-.page5 .man2{    width: 150px;
+.page5 .man2{    width: 100px;
     left: 1000px;
     bottom: 174px;
     z-index: 300;animation:man2Move 14s linear infinite;}
@@ -1111,4 +1126,8 @@ img{
         margin: 0 10px;
         height: 40px;
     }
+}
+
+.ot-content{
+    text-indent: 2em;
 }

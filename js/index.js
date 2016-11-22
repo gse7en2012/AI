@@ -11,7 +11,7 @@
                 h: $(window).height()
             }
         },
-        pageName:['开始','种植站','生产站','包装站','商店'],
+        pageName:['开始','种植站','生产站','包装站','专卖店'],
         init: function () {
             this.setSwiper();
             this.setCloseTrigger();
@@ -53,17 +53,25 @@
                 word:'“质检是至关重要的质量把控环节，<br>因此我所负责的每一项检验都要‘锱铢必较’”',
                 img:'images/page4/psj.jpg',
                 content:'100％的严谨<br>潘守俊对产品质量的严格要求，体现在其对生产线的各项指标的精确检验，十年来始终如一。从生产前产品所有原材料的质量是否符合标准，生产中配置的液料取样是否达标，到成品的相对密度、固体物、微生物、PH值、多糖含量等各项数值指标，潘守俊的质检工作都一步不落，严谨而有序地进行，每一项检测都严格把控，即使只是一丝一毫的误差，都绝不放过。'
+            },
+            {
+                name:'成为优惠顾客',
+                title:null,
+                age:null,
+                word:null,
+                img:null,
+                content:'在无限极大家庭里，您只要申请成为优惠消费者，就可以得到贴心的服务与支持。祝您有一个愉快的购物体验。<br>一、我通过哪些渠道可以申请成为优惠消费者？<br>通过e帆网在线办理，或者前往全国任何一家服务中心、专卖店都可申请成为优惠消费者。<br>二、我想成为优惠消费者，应该如何办理呢？<br>1、一次性按统一零售价购货达到公司规定金额； <br>2、提交相关资料（有效的身份证原件、复印件）； <br>3、核对《优惠消费者申请单》； <br>4、签名确认； <br>5、提货、验货。 <br>三、成为优惠消费者后，我可以享受哪些权益？<br>1、享有按公司优惠价购货的权利；<br>2、享有享受公司消费者回馈计划的权利；<br>3、享有参与公司促销推广等活动的权利；<br>4、享有按公司规定办理退换货的权利。<br>温馨提醒：<br>欲了解更多详情，请向各地服务中心、专卖店或拨打客服热线（400-800-1188）咨询。'
             }
         ],
         getIntro(index){
             var person=this.storyList[index];
             var html='<div>';
-            html+='<div class="name">'+person.name+'</div>';
-            html+='<div class="title">'+person.title+'</div>';
-            html+='<div class="age">'+person.age+'</div>';
-            html+='<img src="'+person.img+'" class="avatar">';
-            html+='<div class="word">'+person.word+'</div>';
-            html+='<div class="content">'+person.content+'</div>';
+            if(person.name) html+='<div class="name">'+person.name+'</div>';
+            if(person.title)html+='<div class="title">'+person.title+'</div>';
+            if(person.age)html+='<div class="age">'+person.age+'</div>';
+            if(person.img) html += '<img src="' + person.img + '" class="avatar">';
+            if(person.word) html+='<div class="word">'+person.word+'</div>';
+            if(person.content)html+='<div class="content">'+person.content+'</div>';
             html+='</div>';
             return html;
         },

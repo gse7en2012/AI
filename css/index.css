@@ -300,10 +300,12 @@ img{
     border-radius: 0;
 }
 .swiper-pagination-bullet{
-    opacity: .5;
+    opacity: 1;
+    color: #000;
 }
 .swiper-pagination-bullet-active{
     opacity: 1;
+    color: #fff;
 }
 
 .logo{ width: 90px; left: 5%; top:8%;z-index: 99; }
@@ -668,9 +670,9 @@ img{
     bottom: 144px;
     z-index: 199;}
 .page3 .busstop{width: 100px;
-    bottom: 120px;
+    bottom: 140px;
     z-index: 300;
-    left: 160px;}
+    left: 100px;}
 .page3 .word{width: 785px;
     left: 345px;
     bottom: 220px;z-index: 200;}
@@ -903,7 +905,12 @@ img{
     }
 }
 
-
+.page4 .stop{
+    width: 100px;
+    bottom: 140px;
+    z-index: 300;
+    left: 100px;
+}
 .page4 .bottle2{
     width: 19px;
     left: 870px;
@@ -1120,7 +1127,7 @@ img{
         left:12%;
     }
     .wxj-pagination{
-        font-size: 30px;bottom:10px;
+        font-size: 24px;bottom:10px;
     }
     .wxj-pagination > .swiper-pagination-bullet{
         margin: 0 10px;
@@ -1130,4 +1137,7 @@ img{
 
 .ot-content{
     text-indent: 2em;
+}
+#opentip-3 .ot-content{
+    text-indent: 0;
 }

@@ -11,7 +11,7 @@
                 h: $(window).height()
             }
         },
-        pageName:['开始','种植站','生产站','包装站','专卖店'],
+        pageName:['开始','种植站','生产站','包装站','服务站'],
         init: function () {
             this.setSwiper();
             this.setCloseTrigger();
@@ -102,6 +102,9 @@
                     //setTimeout(function(){
                     //    $('.replay-animate').addClass('animated').removeClass('replay-animate')
                     //},500)
+                },
+                onTransitionStart:function(){
+                    $('.opentip-container').addClass('ot-hidden')
                 },
                 onTransitionEnd:function(sw){
                    if(sw.activeIndex==4){

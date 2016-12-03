@@ -1,0 +1,147 @@
+
+.main{
+    position: relative;
+}
+
+.main .background img{
+    width: 100%;
+    display: block;
+    margin: 0;
+    position: static;
+}
+
+.main img{
+    position: absolute;
+}
+
+.main .car{
+    width: 15%;
+    position: fixed;
+    top:50%;
+    transform: translateY(-50%);
+    left:1%;
+    animation:carMove 0.1s linear 0s infinite alternate;
+    z-index: 999;
+}
+@keyframes carMove{
+    from {
+        -webkit-transform: translate3d(-1px,0,0px);
+        transform: translate3d(-1px,0,0px);
+    }
+
+    to {
+        -webkit-transform: translate3d(2px,0,0px);
+        transform: translate3d(2px,0,0px);
+    }
+}
+
+
+
+.main .sun{
+    width: 14%;
+    top:12%;
+    right:7%;
+    animation:sunRotate linear 6s infinite;
+}
+@keyframes sunRotate {
+    from{
+        -webkit-transform: none;
+        transform:none;
+    }
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform:rotate(180deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+        transform:rotate(360deg);
+    }
+}
+
+.main .cloud{
+    animation:cloudMove linear 15s infinite;
+    width: 9%;
+    top: 11%;
+    z-index: 100;
+    right: 14%;
+}
+@keyframes cloudMove {
+    0%{
+        -webkit-transform: translateY(150%);
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    50%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        -webkit-transform: translateY(-150%);
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+}
+
+.main .cloud2{
+    animation:cloudMove2 linear 18s infinite;
+    width: 6%;
+    top: 8%;
+    z-index: 100;
+    right: 21%;
+}
+
+@keyframes cloudMove2 {
+    0%{
+        -webkit-transform: translateY(300%);
+        transform: translateY(300%);
+        opacity: .3;
+    }
+    50%{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        -webkit-transform: translateY(-300%);
+        transform: translateY(-300%);
+        opacity: .3;
+    }
+}
+
+.main .farmer{
+    width: 30%;
+    top: 18.4%;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    left: 15%;
+}
+
+.main .machine{
+    width: 52%;
+    top: 51%;
+    left: 7.8%;
+}
+
+.main .m2{
+    width: 36%;
+    top: 62.5%;
+    left: 9.5%;
+}
+
+.main .m3{
+    width: 36%;
+    top: 68.5%;
+    left: 9.5%;
+}
+
+.main .m4{
+    width: 28%;
+    top: 72.3%;
+    left: 9.5%;
+}
+.main .box{
+    top: 76.5%;
+    width: 37%;
+    left: 10%;
+}

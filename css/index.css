@@ -123,7 +123,9 @@ img{
 
 
 /*my style*/
-
+body{
+    font-family: "Microsoft yahei" ;
+}
 .gray{
     position: fixed;
     background:#b5b6b6;
@@ -323,11 +325,24 @@ img{
     position: static!important;
     animation:upDown 1s linear infinite
 }
-@keyframes upDown {
+
+@-webkit-keyframes upDown {
     0%{
+        -webkit-transform:translateY(-10%);
         transform:translateY(-10%)
     }
     100%{
+        -webkit-transform:translateY(10%);
+        transform:translateY(10%)
+    }
+}
+@keyframes upDown {
+    0%{
+        -webkit-transform:translateY(-10%);
+        transform:translateY(-10%)
+    }
+    100%{
+        -webkit-transform:translateY(10%);
         transform:translateY(10%)
     }
 }
@@ -478,6 +493,8 @@ img{
     left: 300px;
     bottom:690px;
     transform-origin: bottom;
+    -webkit-transform-origin: bottom;
+    -webkit-transform: scale(.8);
     transform: scale(.8);
 }
 .page2 .guide2{
@@ -511,14 +528,14 @@ img{
     animation:cloudMove linear 20s infinite;z-index: 101;}
 
 .active .branch.animated{opacity:1;-webkit-animation:growup 1.5s linear both 1s;animation:growup 1.5s linear both 1s;}
-.active .gouqi{animation:bounceIn .5s linear 2.9s forwards,page2Rotate 5s linear infinite;; }
-.active .juemingzi{animation:bounceIn .5s linear 2.3s forwards,page2Rotate 4.2s linear infinite;; }
-.active .juhua{animation:bounceIn .5s linear 2.5s forwards,page2Rotate 4.5s linear infinite;; }
-.active .fuling{animation:bounceIn .5s linear 2.7s forwards,page2Rotate 4.2s linear infinite;; }
-.active .jinzhengu{animation:bounceIn .5s linear 2.8s forwards,page2Rotate 4.4s linear infinite;; }
-.active .xianggu{animation:bounceIn .5s linear 2.6s forwards,page2Rotate 4.8s linear infinite;; }
-.active .sangshen{animation:bounceIn .5s linear 2.2s forwards,page2Rotate 4s linear infinite;; }
-.active .yiner{animation:bounceIn .5s linear 2.4s forwards,page2Rotate 3.8s linear infinite;transform-origin: 40% 55%; }
+.active .gouqi{-webkit-animation:bounceIn .5s linear 2.9s forwards,page2Rotate 5s linear infinite;animation:bounceIn .5s linear 2.9s forwards,page2Rotate 5s linear infinite;; }
+.active .juemingzi{-webkit-animation:bounceIn .5s linear 2.3s forwards,page2Rotate 4.2s linear infinite;animation:bounceIn .5s linear 2.3s forwards,page2Rotate 4.2s linear infinite;; }
+.active .juhua{-webkit-animation:bounceIn .5s linear 2.5s forwards,page2Rotate 4.5s linear infinite;animation:bounceIn .5s linear 2.5s forwards,page2Rotate 4.5s linear infinite;; }
+.active .fuling{-webkit-animation:bounceIn .5s linear 2.7s forwards,page2Rotate 4.2s linear infinite;animation:bounceIn .5s linear 2.7s forwards,page2Rotate 4.2s linear infinite;; }
+.active .jinzhengu{-webkit-animation:bounceIn .5s linear 2.8s forwards,page2Rotate 4.4s linear infinite;animation:bounceIn .5s linear 2.8s forwards,page2Rotate 4.4s linear infinite;; }
+.active .xianggu{-webkit-animation:bounceIn .5s linear 2.6s forwards,page2Rotate 4.8s linear infinite;animation:bounceIn .5s linear 2.6s forwards,page2Rotate 4.8s linear infinite;; }
+.active .sangshen{-webkit-animation:bounceIn .5s linear 2.2s forwards,page2Rotate 4s linear infinite;animation:bounceIn .5s linear 2.2s forwards,page2Rotate 4s linear infinite;; }
+.active .yiner{-webkit-animation:bounceIn .5s linear 2.4s forwards,page2Rotate 3.8s linear infinite;animation:bounceIn .5s linear 2.4s forwards,page2Rotate 3.8s linear infinite;-webkit-transform-origin: 40% 55%;transform-origin: 40% 55%; }
 
 
 @-webkit-keyframes growup {
@@ -543,7 +560,8 @@ img{
 }
 @-webkit-keyframes page2Rotate {
     0%{
-        transform:rotate(0deg)
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg);
     }
     25%{
         -webkit-transform: rotate(10deg); -moz-transform: rotate(10deg); -ms-transform: rotate(10deg); -o-transform: rotate(10deg); transform: rotate(10deg);
@@ -560,6 +578,7 @@ img{
 }
 @keyframes page2Rotate {
     0%{
+        -webkit-transform:rotate(0deg);
         transform:rotate(0deg)
     }
     25%{
@@ -610,6 +629,14 @@ img{
         -webkit-transform: translateY(0);  transform: translateY(0);
     }
 }
+@-webkit-keyframes birdMove {
+    0%{
+        left:-10%
+    }
+    100%{
+        left:105%;
+    }
+}
 @keyframes birdMove {
     0%{
        left:-10%
@@ -636,11 +663,23 @@ img{
     transform: rotate(180deg);
     animation-name: upDownRotate;
 }
-@keyframes upDownRotate {
+@-webkit-keyframes upDownRotate {
     0%{
+        -webkit-transform:translateY(10%) rotate(180deg);
         transform:translateY(10%) rotate(180deg)
     }
     100%{
+        -webkit-transform:translateY(-10%) rotate(180deg);
+        transform:translateY(-10%) rotate(180deg)
+    }
+}
+@keyframes upDownRotate {
+    0%{
+        -webkit-transform:translateY(10%) rotate(180deg);
+        transform:translateY(10%) rotate(180deg)
+    }
+    100%{
+        -webkit-transform:translateY(-10%) rotate(180deg);
         transform:translateY(-10%) rotate(180deg)
     }
 }
@@ -688,7 +727,9 @@ img{
     z-index: 300;
     width: 80px;
     opacity: 1;
+    -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
+    -webkit-animation:flog1Up 3.2s linear infinite;
     animation:flog1Up 3.2s linear infinite;
 }
 .page3 .flog2 {
@@ -697,7 +738,9 @@ img{
     z-index: 300;
     width: 80px;
     opacity: 1;
+    -webkit-transform-origin: 0 100%;
     transform-origin: 0 100%;
+    -webkit-animation: flog2Up 4s linear infinite;
     animation: flog2Up 4s linear infinite;
 }
 .page2 .syzl,.page3 .story,.page4 .story,.page5 .story{right: 13%;
@@ -715,17 +758,34 @@ img{
 .page3 .water1{
     left: 0;
     width: 60px;
+    -webkit-animation: waterDrop 2.4s linear infinite;
     animation: waterDrop 2.4s linear infinite;
 }
 .page3 .water2{
     left: 70px;
     width: 60px;
+    -webkit-animation: waterDrop 2.4s linear .5s infinite;
     animation: waterDrop 2.4s linear .5s infinite;
 }
 .page3 .water3{
     left: 140px;
     width: 60px;
+    -webkit-animation: waterDrop 2.4s linear 1s infinite;
     animation: waterDrop 2.4s linear 1s infinite;
+}
+@-webkit-keyframes waterDrop {
+    0%{
+        top:-20px;
+    }
+    75%{
+        top:0px;
+    }
+    85%{
+        top:50px;
+    }
+    100%{
+        top:50px;
+    }
 }
 @keyframes waterDrop {
     0%{
@@ -739,6 +799,28 @@ img{
     }
     100%{
         top:50px;
+    }
+}
+@-webkit-keyframes flog1Up {
+    0%{
+        left:365px;
+        bottom: 465px;
+        opacity: 1;
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+    }
+    90%{
+        left:400px;
+        bottom: 520px;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 0;
+    }
+    100%{
+        left:400px;
+        bottom: 520px;
+        -webkit-transform: scale(1);
+        opacity: 0;
     }
 }
 @keyframes flog1Up {
@@ -758,6 +840,26 @@ img{
         left:400px;
         bottom: 520px;
         transform: scale(1);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes flog2Up {
+    0%{
+        left: 1040px;
+        bottom: 375px;
+        opacity: 1;
+        -webkit-transform: scale(0.3);
+    }
+    90%{
+        left:1070px;
+        bottom: 420px;
+        -webkit-transform: scale(1.1);
+        opacity: 0;
+    }
+    100%{
+        left:1070px;
+        bottom: 420px;
+        -webkit-transform: scale(1.1);
         opacity: 0;
     }
 }
@@ -836,6 +938,7 @@ img{
      z-index: 1000;
      left: 1000px;
      bottom: 394px;
+     -webkit-animation: packBoxMove 6s linear infinite;
      animation: packBoxMove 6s linear infinite;
  }
 .page4 .box2{
@@ -843,6 +946,7 @@ img{
     z-index: 1000;
     left: 1000px;
     bottom: 394px;
+    -webkit-animation: packBoxMove 6s linear infinite 3s;
     animation: packBoxMove 6s linear infinite 3s;
 }
 .page4 .box3{
@@ -850,7 +954,19 @@ img{
     z-index: 1000;
     left: 1000px;
     bottom: 394px;
+    -webkit-animation: packBoxMove 6s linear infinite 4s;
     animation: packBoxMove 6s linear infinite 4s;
+}
+@-webkit-keyframes packBoxMove {
+    0%{
+        left: 849px;
+        bottom: 497px;
+    }
+    100%{
+        left: 1000px;
+        bottom: 394px;
+    }
+
 }
 @keyframes packBoxMove {
     0%{
@@ -869,33 +985,50 @@ img{
     bottom: 209px;
 }
 .page4 .b1{
+    -webkit-animation:bottleMove 6.3s linear infinite;
     animation:bottleMove 6.3s linear infinite;
 }
 .page4 .b2{
+    -webkit-animation:bottleMove 6.3s linear infinite .7s;
     animation:bottleMove 6.3s linear infinite .7s;
 }
 .page4 .b3{
+    -webkit-animation:bottleMove 6.3s linear infinite 1.4s;
     animation:bottleMove 6.3s linear infinite 1.4s;
 }
 .page4 .b4{
+    -webkit-animation:bottleMove 6.3s linear infinite 2.1s;
     animation:bottleMove 6.3s linear infinite 2.1s;
 }
 .page4 .b5{
+    -webkit-animation:bottleMove 6.3s linear infinite 2.8s;
     animation:bottleMove 6.3s linear infinite 2.8s;
 }
 .page4 .b6{
+    -webkit-animation:bottleMove 6.3s linear infinite 3.5s;
     animation:bottleMove 6.3s linear infinite 3.5s;
 }
 .page4 .b7{
+    -webkit-animation:bottleMove 6.3s linear infinite 4.2s;
     animation:bottleMove 6.3s linear infinite 4.2s;
 }
 .page4 .b8{
+    -webkit-animation:bottleMove 6.3s linear infinite 4.9s;
     animation:bottleMove 6.3s linear infinite 4.9s;
 }
 .page4 .b9{
+    -webkit-animation:bottleMove 6.3s linear infinite 5.6s;
     animation:bottleMove 6.3s linear infinite 5.6s;
 }
 
+@-webkit-keyframes bottleMove {
+    0%{
+        left: 245px;
+    }
+    100%{
+        left: 470px;
+    }
+}
 @keyframes bottleMove {
     0%{
         left: 245px;
@@ -917,27 +1050,41 @@ img{
     bottom: 209px;
 }
 .page4 .bo1{
+    -webkit-animation:bottleMove2 4.9s linear infinite;
     animation:bottleMove2 4.9s linear infinite;
 }
 .page4 .bo2{
+    -webkit-animation:bottleMove2 4.9s linear infinite .7s;
     animation:bottleMove2 4.9s linear infinite .7s;
 }
 .page4 .bo3{
+    -webkit-animation:bottleMove2 4.9s linear infinite 1.4s;
     animation:bottleMove2 4.9s linear infinite 1.4s;
 }
 .page4 .bo4{
+    -webkit-animation:bottleMove2 4.9s linear infinite 2.1s;
     animation:bottleMove2 4.9s linear infinite 2.1s;
 }
 .page4 .bo5{
+    -webkit-animation:bottleMove2 4.9s linear infinite 2.8s;
     animation:bottleMove2 4.9s linear infinite 2.8s;
 }
 .page4 .bo6{
+    -webkit-animation:bottleMove2 4.9s linear infinite 3.5s;
     animation:bottleMove2 4.9s linear infinite 3.5s;
 }
 .page4 .bo7{
+    -webkit-animation:bottleMove2 4.9s linear infinite 4.2s;
     animation:bottleMove2 4.9s linear infinite 4.2s;
 }
-
+@-webkit-keyframes bottleMove2 {
+    0%{
+        left: 600px;
+    }
+    100%{
+        left: 770px;
+    }
+}
 @keyframes bottleMove2 {
     0%{
         left: 600px;
@@ -949,10 +1096,10 @@ img{
 
 
 .page4 .tips{
-    width: 80px;
-    height: 90px;
+    width: 90px;
+    height: 100px;
     font-size: 16px;
-    line-height: 46px;
+    line-height: 50px;
 }
 .page4 .tips1{left: 240px; bottom: 290px;}
 .page4 .tips2{left: 400px; bottom: 380px;}
@@ -964,8 +1111,8 @@ img{
     line-height: 35px;}
 .page4 .tips4{left: 1070px;
     bottom: 370px;
-    width: 90px;
-    height: 100px;font-size: 15px;}
+    width: 100px;
+    height: 110px;font-size: 14px;}
 
 .pc5{}
 .pc5 .road-long5{background: #898989 url(../images/page3/road333.png) repeat-x 0 78px;
@@ -1007,7 +1154,9 @@ img{
 .page5 .busstop{ z-index: 212; width: 110px; bottom: 125px; left: 170px;}
 .page5 .plane{width: 100px;
     left: 1000px;
-    bottom: 640px;animation:planeMove 22s linear infinite;}
+    bottom: 640px;
+    -webkit-animation:planeMove 22s linear infinite;
+    animation:planeMove 22s linear infinite;}
 .page5 .home{    width: 540px;
     bottom: 306px;
     left: 420px;z-index: 205;}
@@ -1017,11 +1166,15 @@ img{
 .page5 .man1{width: 90px;
     bottom: 200px;
     left: 400px;
-    z-index: 300;animation:man1Move 7s linear infinite; }
+    z-index: 300;
+    -webkit-animation:man1Move 7s linear infinite;
+    animation:man1Move 7s linear infinite; }
 .page5 .man2{    width: 100px;
     left: 1000px;
     bottom: 174px;
-    z-index: 300;animation:man2Move 14s linear infinite;}
+    z-index: 300;
+    -webkit-animation:man2Move 14s linear infinite;
+    animation:man2Move 14s linear infinite;}
 .page5 .cloud2{right: 400px; bottom:600px;-webkit-animation:cloudMove2 linear 16s infinite;
     animation:cloudMove2 linear 16s infinite;}
 .page5 .c22{width: 100px;bottom: 650px;left: 200px;
@@ -1069,6 +1222,28 @@ img{
         transform: translateX(420%);
     }
 }
+@-webkit-keyframes man1Move {
+    0%{
+        left: 410px;
+        bottom: 200px;
+        opacity: 1;
+    }
+    20%{
+        left: 447px;
+        bottom: 200px;
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+        bottom: 280px;
+        left: 620px;
+    }
+    100%{
+        opacity: 0;
+        bottom: 280px;
+        left: 620px;
+    }
+}
 @keyframes man1Move {
     0%{
         left: 410px;
@@ -1089,6 +1264,24 @@ img{
         opacity: 0;
         bottom: 280px;
         left: 620px;
+    }
+}
+@-webkit-keyframes man2Move {
+    0%{
+        left: 622px;
+        bottom: 270px;
+        opacity: 0;
+    }
+    5%{
+        opacity: 1;
+    }
+    50%{
+        left: 1000px;
+        bottom: 200px;
+    }
+    100%{
+        left:1400px;
+        bottom:200px;
     }
 }
 @keyframes man2Move {
